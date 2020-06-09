@@ -10,34 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
   
-  var model = Dish.all()
-  @State private var isSpicy = false
-  
-  
+  @State var name: String = "aaa"
+ 
   var body: some View {
-    List {
-      Toggle(isOn: $isSpicy) {
-        Text("Spicy")
-          .font(.title)
-      }
-      
-      ForEach(model.filter { $0.isSpicy == self.isSpicy}) { dish in
-        HStack {
-          
-          Image(dish.imageURL)
-            .resizable()
-            .frame(width: 100, height: 100)
-          Text(dish.name)
-            .font(.title)
-            .lineLimit(nil)
-          Spacer()
-          if dish.isSpicy {
-            Image("icon")
-              .resizable()
-              .frame(width: 20, height: 20)
-          }
-        }
-      }
+    VStack {
+      Text(name)
+      TextField("Enter", text: $name)
+  
     }
   }
 }
