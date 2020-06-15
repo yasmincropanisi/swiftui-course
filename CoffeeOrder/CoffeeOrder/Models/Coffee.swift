@@ -18,9 +18,9 @@ struct Coffee: Codable {
 extension Coffee {
   static func all() -> [Coffee] {
     return [
-      Coffee(name: "Cappucino", imageURL: "Cappucino", price: 10.0),
-      Coffee(name: "Expresso", imageURL: "Expresso", price: 10.0),
-      Coffee(name: "Regular", imageURL: "Regular", price: 10.0)
+      Coffee(name: "Cappuccino", imageURL: "Cappuccino", price: 5.0),
+      Coffee(name: "Expresso", imageURL: "Expresso", price: 1.5),
+      Coffee(name: "Regular", imageURL: "Regular", price: 4.0)
     ]
   }
 }
