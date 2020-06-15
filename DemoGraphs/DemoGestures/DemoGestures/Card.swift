@@ -10,8 +10,21 @@ import SwiftUI
 
 struct Card: View {
   let tapped: Bool
+  @State private var scale: CGFloat = 1
+  
   var body: some View {
     VStack {
+      Image("mila")
+        .resizable()
+        .scaleEffect(self.scale)
+        .frame(width: 300, height: 300)
+        .cornerRadius(10)
+        
+        .gesture(MagnificationGesture()
+          .onChanged{ value in
+            self.scale = value.magnitude
+        })
+      
       Text("Card")
         .font(.largeTitle)
         .foregroundColor(Color.white)
