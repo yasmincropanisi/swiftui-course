@@ -9,19 +9,20 @@
 import SwiftUI
 
 struct Card: View {
+  let tapped: Bool
   var body: some View {
     VStack {
       Text("Card")
         .font(.largeTitle)
         .foregroundColor(Color.white)
     }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-      .background(Color.purple)
+      .background(tapped ? Color.purple : Color.blue)
       .cornerRadius(30)
   }
 }
 
 struct Card_Previews: PreviewProvider {
   static var previews: some View {
-    Card()
+    Card(tapped: true)
   }
 }
