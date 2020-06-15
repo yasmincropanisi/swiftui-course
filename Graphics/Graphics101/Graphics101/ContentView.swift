@@ -10,14 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
   var body: some View {
-    VStack {
-      Circle()
-        .fill(Color.purple)
-        .frame(width: 200, height: 200)
-      Circle()
-        .stroke(Color.green, lineWidth: 20)
-      
-    }
+    BarGraph(reports: Report.all())
     
   }
 }

@@ -13,6 +13,8 @@
 		0B99E29A2498126B005FDB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B99E2992498126B005FDB4C /* Assets.xcassets */; };
 		0B99E29D2498126B005FDB4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B99E29C2498126B005FDB4C /* Preview Assets.xcassets */; };
 		0B99E2A02498126B005FDB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B99E29E2498126B005FDB4C /* LaunchScreen.storyboard */; };
+		0B99E2AA249813BF005FDB4C /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E2A9249813BF005FDB4C /* BarGraph.swift */; };
+		0B99E2AE24981546005FDB4C /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E2AD24981546005FDB4C /* Report.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0B99E29C2498126B005FDB4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B99E29F2498126B005FDB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B99E2A12498126B005FDB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B99E2A9249813BF005FDB4C /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		0B99E2AD24981546005FDB4C /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		0B99E29224981269005FDB4C /* Graphics101 */ = {
 			isa = PBXGroup;
 			children = (
+				0B99E2AC24981521005FDB4C /* Models */,
+				0B99E2AB2498150D005FDB4C /* Services */,
 				0B99E29324981269005FDB4C /* AppDelegate.swift */,
 				0B99E29524981269005FDB4C /* SceneDelegate.swift */,
 				0B99E29724981269005FDB4C /* ContentView.swift */,
@@ -63,6 +69,7 @@
 				0B99E29E2498126B005FDB4C /* LaunchScreen.storyboard */,
 				0B99E2A12498126B005FDB4C /* Info.plist */,
 				0B99E29B2498126B005FDB4C /* Preview Content */,
+				0B99E2A9249813BF005FDB4C /* BarGraph.swift */,
 			);
 			path = Graphics101;
 			sourceTree = "<group>";
@@ -73,6 +80,21 @@
 				0B99E29C2498126B005FDB4C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B99E2AB2498150D005FDB4C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0B99E2AC24981521005FDB4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B99E2AD24981546005FDB4C /* Report.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B99E2AA249813BF005FDB4C /* BarGraph.swift in Sources */,
+				0B99E2AE24981546005FDB4C /* Report.swift in Sources */,
 				0B99E29424981269005FDB4C /* AppDelegate.swift in Sources */,
 				0B99E29624981269005FDB4C /* SceneDelegate.swift in Sources */,
 				0B99E29824981269005FDB4C /* ContentView.swift in Sources */,
