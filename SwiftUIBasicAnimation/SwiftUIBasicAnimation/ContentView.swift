@@ -17,10 +17,11 @@ struct ContentView: View {
         self.showDetails.toggle()
       }
       HStack {
-        Text(self.showDetails ? "Hide details" : "Show details")
-        Image(systemName: "chevron.up.square")
-          .rotationEffect(.degrees(self.showDetails ? 0 : 180))
-          .animation(.easeOut)
+        Text("🛬")
+          .font(.custom("Arial", size: 100))
+          .offset(x: self.showDetails ? UIScreen.main.bounds.width - 120 : 0)
+          .animation((.interpolatingSpring(mass: 1.0, stiffness: 100.0, damping: 10, initialVelocity: 0)))
+        Spacer()
       }
     }
   }
