@@ -7,3 +7,38 @@
 //
 
 import Foundation
+import SwiftUI
+import CoreData
+import Combine
+
+class OrderListViewModel: ObservableObject {
+  
+  
+  @Published
+  var orders = [OrderViewModel]()
+  
+  init() {
+    fetchAllOrders()
+  }
+  
+  func deleteOrder(_ orderVM: OrderViewModel) {
+    CoreDataManager.shared.deleteOrder(name: orderVM.name)
+    fetchAllOrders()
+  }
+  
+  func fetchAllOrders() {
+    self.orders = CoreDataManager.shared.fetchAllOrders().map(OrderViewModel.init)
+    print(orders)
+  }
+}
+
+
+class OrderViewModel {
+  var name: String = ""
+  var type: String = ""
+  
+  init(order: Order) {
+    self.name = order.name!
+    self.type = order.type!
+  }
+}

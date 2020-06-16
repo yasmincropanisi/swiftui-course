@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct AddOrderViewModel {
+
+  var name: String = ""
+  var type: String = ""
+  
+  func saveOrder() {
+    CoreDataManager.shared.saveOrder(name: name, type: type)
+  }
+  
+}

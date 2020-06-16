@@ -14,6 +14,11 @@
 		0B99E307249921FC005FDB4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B99E306249921FC005FDB4C /* Assets.xcassets */; };
 		0B99E30A249921FC005FDB4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B99E309249921FC005FDB4C /* Preview Assets.xcassets */; };
 		0B99E30D249921FC005FDB4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B99E30B249921FC005FDB4C /* LaunchScreen.storyboard */; };
+		0B99E31624992396005FDB4C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E31524992396005FDB4C /* CoreDataManager.swift */; };
+		0B99E3192499245D005FDB4C /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E3182499245D005FDB4C /* NSManagedObjectContext+Extensions.swift */; };
+		0B99E31C24992557005FDB4C /* AddOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E31B24992557005FDB4C /* AddOrderViewModel.swift */; };
+		0B99E31F24992595005FDB4C /* AddOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E31E24992595005FDB4C /* AddOrderView.swift */; };
+		0B99E321249929AD005FDB4C /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E320249929AD005FDB4C /* OrderListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		0B99E309249921FC005FDB4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0B99E30C249921FC005FDB4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B99E30E249921FC005FDB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B99E31524992396005FDB4C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0B99E3182499245D005FDB4C /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		0B99E31B24992557005FDB4C /* AddOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderViewModel.swift; sourceTree = "<group>"; };
+		0B99E31E24992595005FDB4C /* AddOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderView.swift; sourceTree = "<group>"; };
+		0B99E320249929AD005FDB4C /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,12 @@
 		0B99E2FC249921FA005FDB4C /* HotCoffeeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0B99E31D24992587005FDB4C /* Views */,
+				0B99E31A2499253F005FDB4C /* View Models */,
+				0B99E31724992443005FDB4C /* Extensions */,
+				0B99E31424992388005FDB4C /* Managers */,
 				0B99E2FD249921FA005FDB4C /* AppDelegate.swift */,
 				0B99E2FF249921FA005FDB4C /* SceneDelegate.swift */,
-				0B99E304249921FA005FDB4C /* ContentView.swift */,
 				0B99E306249921FC005FDB4C /* Assets.xcassets */,
 				0B99E30B249921FC005FDB4C /* LaunchScreen.storyboard */,
 				0B99E30E249921FC005FDB4C /* Info.plist */,
@@ -76,6 +89,40 @@
 				0B99E309249921FC005FDB4C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0B99E31424992388005FDB4C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0B99E31524992396005FDB4C /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0B99E31724992443005FDB4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B99E3182499245D005FDB4C /* NSManagedObjectContext+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0B99E31A2499253F005FDB4C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B99E31B24992557005FDB4C /* AddOrderViewModel.swift */,
+				0B99E320249929AD005FDB4C /* OrderListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		0B99E31D24992587005FDB4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B99E31E24992595005FDB4C /* AddOrderView.swift */,
+				0B99E304249921FA005FDB4C /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +199,12 @@
 				0B99E2FE249921FA005FDB4C /* AppDelegate.swift in Sources */,
 				0B99E303249921FA005FDB4C /* HotCoffeeApp.xcdatamodeld in Sources */,
 				0B99E305249921FA005FDB4C /* ContentView.swift in Sources */,
+				0B99E321249929AD005FDB4C /* OrderListViewModel.swift in Sources */,
+				0B99E31624992396005FDB4C /* CoreDataManager.swift in Sources */,
 				0B99E300249921FA005FDB4C /* SceneDelegate.swift in Sources */,
+				0B99E31F24992595005FDB4C /* AddOrderView.swift in Sources */,
+				0B99E31C24992557005FDB4C /* AddOrderViewModel.swift in Sources */,
+				0B99E3192499245D005FDB4C /* NSManagedObjectContext+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
