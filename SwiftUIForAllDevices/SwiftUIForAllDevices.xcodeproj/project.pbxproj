@@ -32,6 +32,15 @@
 		0B99E402249960D0005FDB4C /* SwiftUIForAllDevices_core.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B99E400249960D0005FDB4C /* SwiftUIForAllDevices_core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B99E405249960D0005FDB4C /* SwiftUIForAllDevices_core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B99E3FE249960D0005FDB4C /* SwiftUIForAllDevices_core.framework */; };
 		0B99E406249960D0005FDB4C /* SwiftUIForAllDevices_core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B99E3FE249960D0005FDB4C /* SwiftUIForAllDevices_core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B99E40D249961C6005FDB4C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E40C249961C6005FDB4C /* Animal.swift */; };
+		0B99E40E249961C6005FDB4C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E40C249961C6005FDB4C /* Animal.swift */; };
+		0B99E40F249961C6005FDB4C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E40C249961C6005FDB4C /* Animal.swift */; };
+		0B99E410249961C6005FDB4C /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E40C249961C6005FDB4C /* Animal.swift */; };
+		0B99E41224996222005FDB4C /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E41124996222005FDB4C /* AnimalService.swift */; };
+		0B99E41324996222005FDB4C /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E41124996222005FDB4C /* AnimalService.swift */; };
+		0B99E41424996222005FDB4C /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E41124996222005FDB4C /* AnimalService.swift */; };
+		0B99E41524996222005FDB4C /* AnimalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E41124996222005FDB4C /* AnimalService.swift */; };
+		0B99E41C24996470005FDB4C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99E41B24996470005FDB4C /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +137,10 @@
 		0B99E3FE249960D0005FDB4C /* SwiftUIForAllDevices_core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUIForAllDevices_core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B99E400249960D0005FDB4C /* SwiftUIForAllDevices_core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUIForAllDevices_core.h; sourceTree = "<group>"; };
 		0B99E401249960D0005FDB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B99E40B249961C5005FDB4C /* SwiftUIForAllDevices-watchOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftUIForAllDevices-watchOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		0B99E40C249961C6005FDB4C /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		0B99E41124996222005FDB4C /* AnimalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalService.swift; sourceTree = "<group>"; };
+		0B99E41B24996470005FDB4C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +210,7 @@
 				0B99E3AA24996035005FDB4C /* LaunchScreen.storyboard */,
 				0B99E3AD24996035005FDB4C /* Info.plist */,
 				0B99E3A724996035005FDB4C /* Preview Content */,
+				0B99E41B24996470005FDB4C /* DetailView.swift */,
 			);
 			path = SwiftUIForAllDevices;
 			sourceTree = "<group>";
@@ -270,6 +284,9 @@
 			children = (
 				0B99E400249960D0005FDB4C /* SwiftUIForAllDevices_core.h */,
 				0B99E401249960D0005FDB4C /* Info.plist */,
+				0B99E40C249961C6005FDB4C /* Animal.swift */,
+				0B99E40B249961C5005FDB4C /* SwiftUIForAllDevices-watchOS-Bridging-Header.h */,
+				0B99E41124996222005FDB4C /* AnimalService.swift */,
 			);
 			path = "SwiftUIForAllDevices-core";
 			sourceTree = "<group>";
@@ -393,6 +410,7 @@
 					};
 					0B99E3B42499606D005FDB4C = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					0B99E3C02499606F005FDB4C = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -402,6 +420,7 @@
 					};
 					0B99E3FD249960D0005FDB4C = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -481,6 +500,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B99E3A024996031005FDB4C /* AppDelegate.swift in Sources */,
+				0B99E41C24996470005FDB4C /* DetailView.swift in Sources */,
+				0B99E40D249961C6005FDB4C /* Animal.swift in Sources */,
+				0B99E41224996222005FDB4C /* AnimalService.swift in Sources */,
 				0B99E3A224996031005FDB4C /* SceneDelegate.swift in Sources */,
 				0B99E3A424996031005FDB4C /* ContentView.swift in Sources */,
 			);
@@ -493,8 +515,10 @@
 				0B99E3C92499606F005FDB4C /* HostingController.swift in Sources */,
 				0B99E3C72499606F005FDB4C /* ContentView.swift in Sources */,
 				0B99E3CD2499606F005FDB4C /* NotificationController.swift in Sources */,
+				0B99E41324996222005FDB4C /* AnimalService.swift in Sources */,
 				0B99E3CB2499606F005FDB4C /* ExtensionDelegate.swift in Sources */,
 				0B99E3CF2499606F005FDB4C /* NotificationView.swift in Sources */,
+				0B99E40E249961C6005FDB4C /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +527,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B99E3EB24996094005FDB4C /* ContentView.swift in Sources */,
+				0B99E41424996222005FDB4C /* AnimalService.swift in Sources */,
 				0B99E3E924996094005FDB4C /* AppDelegate.swift in Sources */,
+				0B99E40F249961C6005FDB4C /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +537,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B99E410249961C6005FDB4C /* Animal.swift in Sources */,
+				0B99E41524996222005FDB4C /* AnimalService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,13 +793,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				IBSC_MODULE = SwiftUIForAllDevices_watchOS_Extension;
 				INFOPLIST_FILE = "SwiftUIForAllDevices-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Study.SwiftUIForAllDevices.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftUIForAllDevices-core/SwiftUIForAllDevices-watchOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
@@ -783,13 +819,20 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				IBSC_MODULE = SwiftUIForAllDevices_watchOS_Extension;
 				INFOPLIST_FILE = "SwiftUIForAllDevices-watchOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = Study.SwiftUIForAllDevices.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftUIForAllDevices-core/SwiftUIForAllDevices-watchOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 6.1;
@@ -799,6 +842,7 @@
 		0B99E3F724996096005FDB4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftUIForAllDevices-macOS/SwiftUIForAllDevices_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -821,6 +865,7 @@
 		0B99E3F824996096005FDB4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SwiftUIForAllDevices-macOS/SwiftUIForAllDevices_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -843,6 +888,7 @@
 		0B99E408249960D0005FDB4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -862,6 +908,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -871,6 +918,7 @@
 		0B99E409249960D0005FDB4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
