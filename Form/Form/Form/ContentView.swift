@@ -14,25 +14,30 @@ struct ContentView: View {
     NavigationView {
       
       Form {
-        Section(header: Text("Night shift automatically shift colors Night shift automatically shift colorsNight shift automatically shift colors Night shift automatically shift colors")
-          .padding(5)
-          .lineLimit(nil)) {
-            Toggle(isOn: $scheduled) {
-              Text("Scheduled")
+        Section(header: Text("")) {
+          HStack {
+            Text("Show Previews")
+            Spacer()
+            NavigationLink(destination: Text("")) {
+              Text("Always").foregroundColor(Color.gray)
+            }.fixedSize()
+          }
+        }
+        Section(header: Text("Notification previews will be shown whether the iPhone is locked or unlocked").foregroundColor(Color.gray).padding(8).lineLimit(nil)) {
+          NavigationLink(destination: Text("")) {
+            Text("Siri Suggestions")
+          }
+        }
+        
+        Section(header: VStack(alignment: .leading) {
+          Text("Choose which app can suggest shortcuts on the lock screen").lineLimit(nil).padding(1)
+          Text("NOTIFICATION STYLE").padding(2)
+        }) {
+          
+          ForEach(self.images, id: \.self) { index in
+              Text("\(index)")
             }
-            HStack {
-              VStack {
-                Text("From")
-                Text("To")
-              }
-              Spacer()
-              NavigationLink(destination: Text("Scheduled Settings")) {
-                VStack {
-                  Text("Sunset").foregroundColor(Color.blue)
-                  Text("Sunrise").foregroundColor(Color.blue)
-                }
-              }.fixedSize()
-            }
+          
         }
       }
       
