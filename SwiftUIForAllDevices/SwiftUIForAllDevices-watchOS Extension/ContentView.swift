@@ -9,8 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+  
+  private let animals = AnimalService.fetchAll()
     var body: some View {
-        Text("Hello, World!")
+      List {
+        ForEach(self.animals, id: \.name) { animal in
+          VStack(alignment: .center) {
+            Text(animal.image)
+              .font(.custom("Arial", size: 100))
+          }.frame(minWidth: 0, maxWidth: .infinity)
+        }
+      }
     }
 }
 
