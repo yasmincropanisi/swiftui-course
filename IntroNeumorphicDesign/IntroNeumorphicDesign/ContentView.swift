@@ -11,7 +11,9 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     VStack {
-      NeumorphicImageButton()
+      NeumorphicImageButton(systemName: "heart.fill", onTap: {
+        print("tapped")
+      })
         .padding()
       
       Text("Hello people")

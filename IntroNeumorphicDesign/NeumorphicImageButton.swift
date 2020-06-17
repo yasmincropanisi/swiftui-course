@@ -9,18 +9,45 @@
 import SwiftUI
 
 struct NeumorphicImageButton: View {
+  
+  @State private var isPressed: Bool = false
+  var onTap: () -> Void
+  private var systemName: String
+  
+  var grayColor: Color {
+    return Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
+  }
+  
+  var whiteColor: Color {
+    return Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
+  }
+  
+  init(systemName: String, onTap: @escaping () -> Void) {
+    self.systemName = systemName
+    self.onTap = onTap
+  }
+  
   var body: some View {
-    Button(action: {}) {
+    Button(action: {
+      self.isPressed = true
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+        self.isPressed = false
+        self.onTap()
+      }
+    }) {
       //SF Symbols
-      Image(systemName: "heart.fill")
+      Image(systemName: systemName)
         .resizable()
         .frame(width: 60, height: 60)
         .padding(30)
         .foregroundColor(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
         .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
     }.clipShape(Circle())
-      .shadow(color: Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), radius: 8, x: 8, y: 8)
-    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), radius: 8, x: -8, y: -8)
+      .shadow(color: isPressed ? whiteColor : grayColor, radius: isPressed ?  4 : 8, x: 8, y: 8)
+      .shadow(color: isPressed ? grayColor : whiteColor , radius: isPressed ? 4 : 8, x: -8, y: -8)
+      .scaleEffect(self.isPressed ? 0.95 : 1.0)
+      .animation(.spring())
   }
+
 }
 
