@@ -13,6 +13,7 @@ struct NeumorphicImageButton: View {
   @State private var isPressed: Bool = false
   var onTap: () -> Void
   private var systemName: String
+  private var size: CGSize
   
   var grayColor: Color {
     return Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
@@ -22,9 +23,10 @@ struct NeumorphicImageButton: View {
     return Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))
   }
   
-  init(systemName: String, onTap: @escaping () -> Void) {
+  init(systemName: String, size: CGSize = CGSize(width: 60, height: 60), onTap: @escaping () -> Void) {
     self.systemName = systemName
     self.onTap = onTap
+    self.size = size
   }
   
   var body: some View {
@@ -38,8 +40,8 @@ struct NeumorphicImageButton: View {
       //SF Symbols
       Image(systemName: systemName)
         .resizable()
-        .frame(width: 60, height: 60)
-        .padding(30)
+        .frame(width: size.width, height: size.height)
+        .padding(20)
         .foregroundColor(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
         .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
     }.clipShape(Circle())
